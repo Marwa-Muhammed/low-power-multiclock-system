@@ -1,0 +1,8 @@
+# ---- Large / restricted binaries ----
+*.gds
+*.db
+
+# ---- OS / Editor junk ----
+.DS_Store
+Thumbs.db
+*.swp
