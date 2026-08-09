@@ -45,18 +45,18 @@ clock domains and avoid data loss between the system's clock domains.
 
 ## Status by Block
 
-| Block | RTL | Verification | Lint/CDC | Synthesis | DFT | PnR | GLS |
-|---|---|---|---|---|---|---|---|
-| UART TX | ✅ | ✅ | 🔄 | 🔄 | ⬜ | ⬜ | ⬜ |
-| UART RX | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| ALU | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Register File | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Async FIFO | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Clock Divider | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Clock Gating | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| Synchronizers | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| System Controller | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| **System Top (integration)** | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Block | RTL | Verification | Lint | CDC | Synthesis | DFT | PnR | GLS |
+|---|---|---|---|---|---|---|---|---|
+| UART TX | ✅ | ✅ | ✅ | ⬜ | ✅ | ⬜ | ⬜ | ⬜ |
+| UART RX | 🔄 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ALU | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Register File | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Async FIFO | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Clock Divider | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Clock Gating | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| Synchronizers | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| System Controller | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| **System Top (integration)** | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
 **Legend:** ✅ Done  🔄 In progress  ⬜ Not started
 
@@ -73,8 +73,7 @@ Each block follows the same standard layout:
 ├── lint/               SpyGlass project file + lint/CDC reports
 │   └── reports/
 ├── synthesis/          Design Compiler scripts, netlists, and reports
-│   ├── scripts/        syn_script.tcl, cons.tcl
-│   ├── logs/           syn.log
+│   ├── scripts/        syn_script.tcl, cons.tcl   
 │   ├── netlist/        Gate-level netlist (.v, .ddc), SDC, SDF
 │   └── reports/        Area, power, timing, clocks, constraints reports
 └── docs/               Design & verification report (PDF)
